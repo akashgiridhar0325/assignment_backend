@@ -36,7 +36,31 @@ backend/
 
 ```
 
-## Installation
+## Docker Installation
+To run this backend inside a Docker container, follow these steps:
+
+1. Build the docker container 
+   ```
+   docker build -t backend-auth-system .
+   ```
+
+2. Run the docker container 
+   ```
+   docker run -d -p 5000:5000 --name backend-container --env-file .env backend-auth-system
+   ```
+
+3. Verify the container is running
+   ```
+   docker ps
+   ```
+If the container is running successfully, you should see it in the list of active containers.
+
+3. Stopping and removing docker container
+   ```
+   docker stop backend-container
+   docker rm backend-container
+   ```
+
 
 ## Installation
 1. Clone the repository:
@@ -105,6 +129,12 @@ backend/
   "message": "Login Successful"
 }
 ```
+
+## Screenshots
+
+1. Set up docker container
+
+![alt text](image.png)
 
 ## Future enhancements 
 - Implement password hashing (e.g., using bcrypt).
