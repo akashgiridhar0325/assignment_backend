@@ -55,7 +55,7 @@ backend/
    ```
 4. Start the development server:
    ```bash
-   npm run dev
+   node app.ts
    ```
 
 ## API Endpoints : 
